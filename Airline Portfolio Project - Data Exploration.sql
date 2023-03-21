@@ -6,7 +6,9 @@ Airline Passenger Satisfaction
 /* Load Airline Passenger Satisfaction dataset */
 
 /* How many total passengers */
---SELECT COUNT(ID) FROM airline_passenger_satisfaction;
+
+SELECT COUNT(ID) FROM airline_passenger_satisfaction;
+
 -- Which percentage of airline passengers are satisfied? Does it vary by customer type? What about type of travel?
 
 -- FINDING PERCETAGE OF AGE RANGES OF PASSENGERS
@@ -71,36 +73,36 @@ SELECT ROUND(
 
 --FINDING PERECNTAGE OF PASSENGERS SATISIFIED BY CLASS
 
---SELECT ROUND(
---        (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction
---            WHERE class = 'business' AND satisfaction = 'satisfied') * 100.0 / (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction),2) AS percentage_satisfied;
---SELECT ROUND(
---        (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction
---            WHERE class = 'business' AND satisfaction = 'Neutral or dissatisfied') * 100.0 / (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction),2) AS percentage_dissatisfied;
---SELECT ROUND(
---        (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction
---            WHERE class = 'Economy' AND satisfaction = 'satisfied') * 100.0 / (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction),2) AS percentage_satisfied;
---SELECT ROUND(
---        (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction
---            WHERE class = 'Economy' AND satisfaction = 'Neutral or dissatisfied') * 100.0 / (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction),2) AS percentage_dissatisfied;
---SELECT ROUND(
---        (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction
---            WHERE class = 'Economy Plus' AND satisfaction = 'satisfied') * 100.0 / (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction),2) AS percentage_satisfied
---SELECT ROUND(
---        (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction
---            WHERE class = 'Economy Plus' AND satisfaction = 'Neutral or dissatisfied') * 100.0 / (SELECT COUNT(*)
---            FROM airline_passenger_satisfaction),2) AS percentage_dissatisfied;
+SELECT ROUND(
+        (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction
+            WHERE class = 'business' AND satisfaction = 'satisfied') * 100.0 / (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction),2) AS percentage_satisfied;
+SELECT ROUND(
+        (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction
+            WHERE class = 'business' AND satisfaction = 'Neutral or dissatisfied') * 100.0 / (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction),2) AS percentage_dissatisfied;
+SELECT ROUND(
+        (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction
+            WHERE class = 'Economy' AND satisfaction = 'satisfied') * 100.0 / (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction),2) AS percentage_satisfied;
+SELECT ROUND(
+        (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction
+            WHERE class = 'Economy' AND satisfaction = 'Neutral or dissatisfied') * 100.0 / (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction),2) AS percentage_dissatisfied;
+SELECT ROUND(
+        (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction
+            WHERE class = 'Economy Plus' AND satisfaction = 'satisfied') * 100.0 / (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction),2) AS percentage_satisfied
+SELECT ROUND(
+        (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction
+            WHERE class = 'Economy Plus' AND satisfaction = 'Neutral or dissatisfied') * 100.0 / (SELECT COUNT(*)
+            FROM airline_passenger_satisfaction),2) AS percentage_dissatisfied;
 
  -- FINDING AVERAGE RATINGS OF CATEGORIES
 
