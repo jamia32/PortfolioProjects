@@ -136,6 +136,37 @@ Cleaning Data in SQL Queries
 --, RIGHT([Destination], LEN([Destination]) - CHARINDEX(',',[Destination])) AS Destination_Country
 --FROM [Traveler].[dbo].[Travel details dataset];
 
+--Updating and Removing Commas from Integers in Costs for Transportation and Accomedations
+
+--update [Traveler].[dbo].[Travel details dataset]
+--    set [Transportation_cost] = '1200'
+--    where [Transportation_cost] = '1,200';
+--update [Traveler].[dbo].[Travel details dataset]
+--    set [Transportation_cost] = '1500'
+--    where [Transportation_cost] = '1,500';
+--update [Traveler].[dbo].[Travel details dataset]
+--    set [Transportation_cost] = '1000'
+--    where [Transportation_cost] = '1,000';
+
+--update [Traveler].[dbo].[Travel details dataset]
+--    set [Accommodation_cost] = '1200'
+--    where [Accommodation_cost] = '1,200';
+--update [Traveler].[dbo].[Travel details dataset]
+--    set [Accommodation_cost] = '1500'
+--    where [Accommodation_cost] = '1,500';
+--update [Traveler].[dbo].[Travel details dataset]
+--    set [Accommodation_cost] = '1000'
+--    where [Accommodation_cost] = '1,000';
+--update [Traveler].[dbo].[Travel details dataset]
+--    set [Accommodation_cost] = '1400'
+--    where [Accommodation_cost] = '1,400';
+--update [Traveler].[dbo].[Travel details dataset]
+--    set [Accommodation_cost] = '2000'
+--    where [Accommodation_cost] = '2,000';
+--update [Traveler].[dbo].[Travel details dataset]
+--    set [Accommodation_cost] = '1100'
+--    where [Accommodation_cost] = '1,100';
+
 
 --Updating and Correcting Destinations to have both City and Country
 
