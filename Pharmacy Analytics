@@ -1,0 +1,30 @@
+/*
+   Pharmacy Analytics Exploration Queries
+/*
+/* Load Pharmacy dataset */
+
+--View final databse tables
+
+SELECT
+drug,
+total_sales - cogs AS total_profit
+FROM pharmacy_sales
+ORDER BY Total_Profit DESC
+LIMIT 3;
+
+SELECT
+drug_manufacturer,
+COUNT(drug) AS drug_count,
+ABS(SUM(total_sales - cogs)) AS 
+total_loss
+FROM pharmacy_sales
+WHERE total_sales - cogs < 0
+GROUP BY drug_manufacturer
+ORDER BY total_loss DESC;
+
+SELECT
+drug_manufacturer,
+CONCAT('$', ROUND(SUM(total_sales)/1000000),' ','million',) AS sale
+FROM pharmacy_sales
+GROUP BY drug_manufacturer
+ORDER BY SUM(total_sales) DESC;
